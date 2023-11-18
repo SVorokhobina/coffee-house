@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -13,19 +14,29 @@ html {
   --text-accent: #B0907A;
   --text-light: #E1D4C9;
   --background-body: #E1D4C9;
+  --background-container: #665F55;
   --border-dark: #665F55;
   --border-light: #C1B6AD; 
 }
 
 body {
   width: 100%;
+  height: 100%;
   background-color: var(--background-body);
   font-family: 'Inter', sans-serif;
+  font-style: normal;
 }
 
 .wrapper {
   width: 1440px;
+  min-height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .header_container {
@@ -51,7 +62,6 @@ body {
   text-decoration: none;
   color: var(--text-dark);
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 150%;
 }
@@ -79,7 +89,6 @@ body {
   text-decoration: none;
   color: var(--text-dark);
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 150%;
 }
@@ -104,7 +113,6 @@ body {
   max-width: 530px;
   color: var(--text-light);
   font-size: 72px;
-  font-style: normal;
   font-weight: 600;
   line-height: 105%;
 }
@@ -118,7 +126,6 @@ body {
   max-width: 530px;
   color: var(--text-light);
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
@@ -133,7 +140,6 @@ body {
   color: var(--text-dark);
   text-align: center;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 150%;
 }
@@ -145,11 +151,10 @@ body {
   margin: 100px 40px 0 40px;
 }
 
-h2 { /* Sections Favourite-coffee and About */
+h2 { /* Sections Favourite-coffee, About, Mobile app */
   color: var(--text-dark);
   text-align: left;
   font-size: 60px;
-  font-style: normal;
   font-weight: 600;
   line-height: 125%;
 }
@@ -178,7 +183,6 @@ h2 > span {
   color: var(--text-dark);
   text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 125%;
 }
@@ -188,7 +192,6 @@ h2 > span {
   color: var(--text-dark);
   text-align: center;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
@@ -198,7 +201,6 @@ h2 > span {
   color: var(--text-dark);
   text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 125%;
 }
@@ -265,4 +267,110 @@ h2 > span {
 .about_gallery_photo img {
   width: 726px;
   height: 726px;
+}
+
+.mobile-app {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 40px 0 40px;
+}
+
+.mobile-app img {
+  width: 630px;
+  height: 630px;
+}
+
+.mobile-app_offer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  align-items: flex-start;
+  width: 630px;
+  text-align: left;
+}
+
+.mobile-app_offer p {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.buy-app_buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+
+.appstore-button img,
+.googleplay-button img {
+  width: 200px;
+  height: 64px;
+}
+
+.footer_container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 100px;
+  margin: 100px 40px 40px 40px;
+  padding: 100px;
+  background-color: var(--background-container);
+  border: none;
+  border-radius: 40px;
+}
+
+.social-media {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 40px;
+  width: 530px;
+  justify-content: space-between;
+}
+
+h2.footer_slogan {
+  color: var(--text-light);
+}
+
+.social-media ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+  list-style-type: none;
+
+}
+
+.contacts {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+.contacts li {
+  margin-top: 16px;
+}
+
+.contacts_title {
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 24px;
+}
+
+.contact_link {
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration-line: none;
+}
+
+.contact_link img {
+  padding-right: 8px;
 }
