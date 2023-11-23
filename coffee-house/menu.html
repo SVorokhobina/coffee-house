@@ -8,49 +8,176 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header id="header">
       <div class="header_container">
-        <a href="#" class="logo"><img src="./images/logo.svg" alt="Coffee House logo"></a>
+        <a href="index.html"><img src="./images/logo.svg" alt="Coffee House"></a>
         <nav>
-          <ul class="nav_menu">
-            <li class="nav_menu_item"><a href="#" class="nav_menu_item-link">Favorite coffee</a></li>
-            <li class="nav_menu_item"><a href="#" class="nav_menu_item-link">About</a></li>
-            <li class="nav_menu_item"><a href="#" class="nav_menu_item-link">Mobile app</a></li>
-            <li class="nav_menu_item"><a href="#" class="nav_menu_item-link">Contact us</a></li>
+          <ul class="nav_list">
+            <li class="nav_list-item"><a href="index.html#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
+            <li class="nav_list-item"><a href="index.html#about_section" class="nav_list-item_link">About</a></li>
+            <li class="nav_list-item"><a href="index.html#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
+            <li class="nav_list-item"><a href="#footer_main_section" class="nav_list-item_link">Contact us</a></li>
           </ul>
         </nav>
-        <div class="nav_coffee-menu">
-          <a href="#">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></a>
-        </div>
+        <div class="nav_menu-link menu_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></div>
       </div>
     </header>
     
-    <main class="main">
+    <main>
+      <section>
+        <div class="menu_container">
+          <h1>Behind each of our cups hides an <span>amazing surprise</span></h1>
+          <div class="menu_buttons">
+            <button class="menu_button_item coffee active">
+              <img src="./images/menu_coffee_icon.svg" alt="Choose Coffee Block">
+              <span>Coffee</span>
+            </button>
+            <button class="menu_button_item tea">
+              <img src="./images/menu_tea_icon.svg" alt="Choose Tea Block">
+              <span>Tea</span>
+            </button>
+            <button class="menu_button_item dessert">
+              <img src="./images/menu_dessert_icon.svg" alt="Choose Dessert Block">
+              <span>Dessert</span>
+            </button>
+          </div>
+
+          <div class="menu-items_container coffee">
+            <div class="menu-items_row">
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo1.png" alt="Irish coffee">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Irish coffee</h4>
+                  <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                  <span>$7.00</span>
+                </div>
+              </div>
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo2.png" alt="Kahlua coffee">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Kahlua coffee</h4>
+                  <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                  <span>$7.00</span>
+                </div>
+              </div>
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo3.png" alt="Honey raf">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Honey raf</h4>
+                  <p>Espresso with frothed milk, cream and aromatic honey</p>
+                  <span>$5.50</span>
+                </div>
+              </div>
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo4.png" alt="Ice cappuccino">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Ice cappuccino</h4>
+                  <p>Cappuccino with soft thick foam in summer version with ice</p>
+                  <span>$5.00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-items_row">
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo5.png" alt="Espresso">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Espresso</h4>
+                  <p>Classic black coffee</p>
+                  <span>$4.50</span>
+                </div>
+              </div>
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo6.png" alt="Latte">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Latte</h4>
+                  <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                  <span>$5.50</span>
+                </div>
+              </div>
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo7.png" alt="Latte macchiato">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Latte macchiato</h4>
+                  <p>Espresso with frothed milk and chocolate</p>
+                  <span>$5.50</span>
+                </div>
+              </div>
+              <div class="menu_single-item_container">
+                <div class="menu_single-item_photo-frame">
+                  <img src="./images/coffee_photo8.png" alt="Coffee with cognac">
+                </div>
+                <div class="menu_single-item_text">
+                  <h4>Coffee with cognac</h4>
+                  <p>Fragrant black coffee with cognac and whipped cream</p>
+                  <span>$6.50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     
-    <footer class="footer">
+    <footer class="footer" id="footer_main_section">
       <div class="footer_container">
-        <div class="social-media">
-          <h2 class="footer_slogan">Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
+        <div class="footer_social-media">
+          <h2>Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
           <ul>
-            <li><a href="#" class="twitter"><img src="./images/twitter_icon.svg" alt="Twitter"></a></li>
-            <li><a href="#" class="instagram"><img src="./images/instagram_icon.svg" alt="Instagram"></a></li>
-            <li><a href="#" class="facebook"><img src="./images/facebook_icon.svg" alt="Facebook"></a></li>
+            <li><a href="#" class="footer_social-media_link twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a></li>
+            <li><a href="#" class="footer_social-media_link instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#E1D4C9"/>
+                <path d="M17.5 6.51L17.51 6.49889" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a></li>
+            <li><a href="#" class="footer_social-media_link facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a></li>
           </ul>
         </div>
-        <ul class="contacts">
-          <h3 class="contacts_title">Contact us</h3>
-          <li><a href="" class="contact_link"><img src="./images/contact_map-icon.svg" alt="Map">8558 Green Rd., LA</a></li>
-          <li><a href="" class="contact_link"><img src="./images/contact_phone-icon.svg" alt="Phone">+1 (603) 555-0123</a></li>
-          <li><a href="" class="contact_link"><img src="./images/contact_clock-icon.svg" alt="Clock">Mon-Sat: 9:00 AM – 23:00 PM</a></li>
-        </ul>
+        <div class="footer_contacts">
+          <h3>Contact us</h3>
+          <ul>            
+            <li><a href="https://maps.app.goo.gl/24zaf4mjcr9ReULf6" target="_blank" class="footer_contact_item">
+              <img src="./images/contact_map-icon.svg" alt="Map">8558 Green Rd., LA
+            </a></li>
+            <li><a href="tel:+16035550123" class="footer_contact_item">
+              <img src="./images/contact_phone-icon.svg" alt="Phone">+1 (603) 555-0123
+            </a></li>
+            <li><span class="footer_contact_item">
+              <img src="./images/contact_clock-icon.svg" alt="Clock">Mon-Sat: 9:00 AM – 23:00 PM
+            </span></li>
+          </ul>
+        </div>
       </div>
-    </footer>
-  
+    </footer>  
   </div>
 </body>
 </html>
