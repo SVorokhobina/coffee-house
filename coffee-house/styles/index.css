@@ -66,10 +66,17 @@ body {
   margin-bottom: 16px;
 }
 
+.header_navigation-block {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+  width: calc(50% + 214px);
+}
+
 .nav_list {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   gap: 40px;
   list-style-type: none;
 }
@@ -138,9 +145,8 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 940px) {
-  .nav_list,
-  .nav_menu-link.home_page {
+@media screen and (max-width: 768px) {
+  .header_navigation-block {
     display: none;
   }
   .burger-menu_button {
