@@ -55,6 +55,8 @@ body {
   }
 }
 
+/* ---------- Header ---------- */
+
 .header_container {
   display: flex;
   flex-flow: row nowrap;
@@ -130,6 +132,20 @@ body {
 
 .nav_menu-link.home_page:hover::after {
   opacity: 1;
+}
+
+.burger-menu_button {
+  display: none;
+}
+
+@media screen and (max-width: 940px) {
+  .nav_list,
+  .nav_menu-link.home_page {
+    display: none;
+  }
+  .burger-menu_button {
+    display: inline-block;
+  }
 }
 
 /* ---------- Enjoy section ---------- */
@@ -211,6 +227,22 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 940px) {
+  .enjoy {
+    padding: 100px 60px;
+  } 
+}
+
+@media screen and (max-width: 730px) {
+  .enjoy {
+    padding: 60px 16px;
+  }
+  .enjoy_container h1 {
+    font-size: 42px;
+    line-height: 115%;
+  }
+}
+
 /* ---------- Favourite Coffee section ---------- */
 
 .favourite-coffee {
@@ -226,6 +258,10 @@ h2 { /* Sections Favourite-coffee, About, Mobile app */
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
+}
+
+.favourite-coffee h2 {
+  text-align: center;
 }
 
 h2 > span {
@@ -326,6 +362,29 @@ h2 > span {
   background-color: var(--border-dark);
 }
 
+@media screen and (max-width: 768px) {
+  .carousel_arrow svg{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .favourite_carousel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .carousel_arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 506px) {
+  .carousel_slide {
+    max-width: 100%;
+  }
+}
+
 /* ---------- About section ---------- */
 
 .about {
@@ -337,16 +396,19 @@ h2 > span {
 
 .about_gallery {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  justify-content: center;
   gap: 40px;
   margin-top: 40px;
+  width: 100%;
 }
 
 .about_gallery_column {
   display: flex;
   flex-flow: column nowrap;
   gap: 40px;
-  width: 660px;
+  max-width: calc((100% - 40px) * 0.5);
+  overflow: hidden;
 }
 
 .about_gallery_photo {
@@ -381,6 +443,27 @@ h2 > span {
   height: 660px;
 }
 
+@media screen and (max-width: 768px) {
+  .about_gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+  .about_gallery_column {
+    max-width: 100%;
+  }
+  .about_gallery_photo.photo_2,
+  .about_gallery_photo.photo_3 {
+    display: none;
+  }
+  .about_gallery_photo:hover > img {
+    width: 688px;
+    height: 688px;
+  }
+}
+
 /* ---------- Mobile App section ---------- */
 
 .mobile-app {
@@ -389,6 +472,7 @@ h2 > span {
   justify-content: space-between;
   align-items: center;
   margin-top: 100px;
+  width: 100%;
 }
 
 .mobile-app_image {
@@ -396,11 +480,17 @@ h2 > span {
   max-height: 630px;
 }
 
+.mobile-app_image img {
+  width: 100%;
+  height: auto;
+}
+
 .mobile-app_offer {
   display: flex;
   flex-flow: column nowrap;
   gap: 40px;
   align-items: flex-start;
+  flex-shrink: 0;
   max-width: 630px;
   text-align: left;
 }
@@ -471,7 +561,7 @@ h2 > span {
   fill: var(--text-light);
 }
 
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1100px) {
   .mobile-app {
     display: flex;
     flex-flow: column nowrap;
@@ -481,6 +571,10 @@ h2 > span {
   }
   .mobile-app_offer {
     max-width: 100%;
+  }
+  .mobile-app_image {
+    max-width: 630px;
+    max-height: 630px;
   }
 }
 
@@ -492,10 +586,6 @@ h2 > span {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
-  }
-  .mobile-app_image {
-    max-width: 100%;
-    /*max-height: attr(max-width px);*/
   }
 }
 
@@ -561,7 +651,7 @@ h2 > span {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  flex-shrink: 0;
+  max-width: 530px;
 }
 
 .footer_contacts h3 {
@@ -583,6 +673,7 @@ h2 > span {
   display: flex;
   flex-flow: row nowrap;
   align-self: flex-start;
+  flex-shrink: 0;
   padding-bottom: 2px;
 }
 
@@ -624,10 +715,12 @@ a.footer_contact_item:hover::after {
     flex-flow: column nowrap;
     align-items: flex-start;
     gap: 100px;
-    padding: 100px 60px;
   }
-  .footer_social-media {
-    max-width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  .footer_container {
+    padding: 100px 60px;
   }
 }
 
