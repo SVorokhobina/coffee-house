@@ -13,18 +13,23 @@
 
 <body>
   <div class="wrapper">
-    <header id="header">
+    <header id="header_menu">
       <div class="header_container">
         <a href="index.html"><img src="./images/logo.svg" alt="Coffee House"></a>
-        <nav>
-          <ul class="nav_list">
-            <li class="nav_list-item"><a href="index.html#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
-            <li class="nav_list-item"><a href="index.html#about_section" class="nav_list-item_link">About</a></li>
-            <li class="nav_list-item"><a href="index.html#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
-            <li class="nav_list-item"><a href="#footer_main_section" class="nav_list-item_link">Contact us</a></li>
-          </ul>
-        </nav>
-        <div class="nav_menu-link menu_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></div>
+        <div class="header_navigation-block">
+          <nav>
+            <ul class="nav_list">
+              <li class="nav_list-item"><a href="index.html#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
+              <li class="nav_list-item"><a href="index.html#about_section" class="nav_list-item_link">About</a></li>
+              <li class="nav_list-item"><a href="index.html#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
+              <li class="nav_list-item"><a href="#footer_menu" class="nav_list-item_link">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="nav_menu-link menu_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></div>
+        </div>
+        <div class="burger-menu_button">
+          <img src="./images/burger-menu-default-icon.svg" alt="Burger Menu">
+        </div>
       </div>
     </header>
     
@@ -48,97 +53,107 @@
           </div>
 
           <div class="menu-items_container coffee">
-            <div class="menu-items_row">
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo1.png" alt="Irish coffee">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Irish coffee</h4>
-                  <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                  <span>$7.00</span>
-                </div>
+            <div class="menu_single-item_container item1">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo1.png" alt="Irish coffee">
               </div>
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo2.png" alt="Kahlua coffee">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Kahlua coffee</h4>
-                  <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-                  <span>$7.00</span>
-                </div>
-              </div>
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo3.png" alt="Honey raf">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Honey raf</h4>
-                  <p>Espresso with frothed milk, cream and aromatic honey</p>
-                  <span>$5.50</span>
-                </div>
-              </div>
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo4.png" alt="Ice cappuccino">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Ice cappuccino</h4>
-                  <p>Cappuccino with soft thick foam in summer version with ice</p>
-                  <span>$5.00</span>
-                </div>
+              <div class="menu_single-item_text">
+                <h4>Irish coffee</h4>
+                <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                <span>$7.00</span>
               </div>
             </div>
 
-            <div class="menu-items_row">
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo5.png" alt="Espresso">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Espresso</h4>
-                  <p>Classic black coffee</p>
-                  <span>$4.50</span>
-                </div>
+            <div class="menu_single-item_container item2">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo2.png" alt="Kahlua coffee">
               </div>
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo6.png" alt="Latte">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Latte</h4>
-                  <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
-                  <span>$5.50</span>
-                </div>
+              <div class="menu_single-item_text">
+                <h4>Kahlua coffee</h4>
+                <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                <span>$7.00</span>
               </div>
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo7.png" alt="Latte macchiato">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Latte macchiato</h4>
-                  <p>Espresso with frothed milk and chocolate</p>
-                  <span>$5.50</span>
-                </div>
+            </div>
+
+            <div class="menu_single-item_container item3">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo3.png" alt="Honey raf">
               </div>
-              <div class="menu_single-item_container">
-                <div class="menu_single-item_photo-frame">
-                  <img src="./images/coffee_photo8.png" alt="Coffee with cognac">
-                </div>
-                <div class="menu_single-item_text">
-                  <h4>Coffee with cognac</h4>
-                  <p>Fragrant black coffee with cognac and whipped cream</p>
-                  <span>$6.50</span>
-                </div>
+              <div class="menu_single-item_text">
+                <h4>Honey raf</h4>
+                <p>Espresso with frothed milk, cream and aromatic honey</p>
+                <span>$5.50</span>
+              </div>
+            </div>
+
+            <div class="menu_single-item_container item4">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo4.png" alt="Ice cappuccino">
+              </div>
+              <div class="menu_single-item_text">
+                <h4>Ice cappuccino</h4>
+                <p>Cappuccino with soft thick foam in summer version with ice</p>
+                <span>$5.00</span>
+              </div>
+            </div>
+
+            <div class="menu_single-item_container item5">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo5.png" alt="Espresso">
+              </div>
+              <div class="menu_single-item_text">
+                <h4>Espresso</h4>
+                <p>Classic black coffee</p>
+                <span>$4.50</span>
+              </div>
+            </div>
+
+            <div class="menu_single-item_container item6">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo6.png" alt="Latte">
+              </div>
+              <div class="menu_single-item_text">
+                <h4>Latte</h4>
+                <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                <span>$5.50</span>
+              </div>
+            </div>
+
+            <div class="menu_single-item_container item7">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo7.png" alt="Latte macchiato">
+              </div>
+              <div class="menu_single-item_text">
+                <h4>Latte macchiato</h4>
+                <p>Espresso with frothed milk and chocolate</p>
+                <span>$5.50</span>
+              </div>
+            </div>
+
+            <div class="menu_single-item_container item8">
+              <div class="menu_single-item_photo-frame">
+                <img src="./images/coffee_photo8.png" alt="Coffee with cognac">
+              </div>
+              <div class="menu_single-item_text">
+                <h4>Coffee with cognac</h4>
+                <p>Fragrant black coffee with cognac and whipped cream</p>
+                <span>$6.50</span>
               </div>
             </div>
           </div>
+          
+          <div class="menu_preloader-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
         </div>
       </section>
     </main>
     
-    <footer class="footer" id="footer_main_section">
+    <footer class="footer" id="footer_menu">
       <div class="footer_container">
         <div class="footer_social-media">
           <h2>Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
@@ -177,7 +192,7 @@
           </ul>
         </div>
       </div>
-    </footer>  
+    </footer>
   </div>
 </body>
 </html>
