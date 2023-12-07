@@ -743,6 +743,7 @@ a.footer_contact_item::after {
   padding: 8px 16px 8px 8px;
   border-radius: 100px;
   border: 1px solid var(--border-light);
+  background-color: transparent;
   transition: background-color 0.4s ease-in-out,
     border-color 0.4s ease-in-out;
 }
@@ -852,6 +853,7 @@ a.footer_contact_item::after {
 }
 
 .menu_preloader-button {
+  display: none;
   width: 60px;
   height: 60px;
   padding: 18px;
@@ -870,6 +872,9 @@ a.footer_contact_item::after {
   .menu_single-item_container.item7,
   .menu_single-item_container.item8 {
     display: none;
+  }
+  .menu_preloader-button {
+    display: inline-block;
   }
 }
 
