@@ -11,24 +11,27 @@
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 
-<body>
+<body class="body">
   <div class="wrapper">
     <header id="header">
       <div class="header_container">
         <a href="#" class="header_logo"><img src="./images/logo.svg" alt="Coffee House"></a>
         <div class="header_navigation-block">
-          <nav>
-            <ul class="nav_list">
-              <li class="nav_list-item"><a href="#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
-              <li class="nav_list-item"><a href="#about_section" class="nav_list-item_link">About</a></li>
-              <li class="nav_list-item"><a href="#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
-              <li class="nav_list-item"><a href="#footer_main_section" class="nav_list-item_link">Contact us</a></li>
-            </ul>
-          </nav>
-          <a href="menu.html" class="nav_menu-link home_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></a>
+          <div class="nav-block_wrapper">
+            <nav>
+              <ul class="nav_list">
+                <li class="nav_list-item"><a href="#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
+                <li class="nav_list-item"><a href="#about_section" class="nav_list-item_link">About</a></li>
+                <li class="nav_list-item"><a href="#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
+                <li class="nav_list-item"><a href="#footer_main_section" class="nav_list-item_link">Contact us</a></li>
+              </ul>
+            </nav>
+            <a href="menu.html" class="nav_menu-link home_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></a>
+          </div>
         </div>
         <div class="burger-menu_button">
-          <img src="./images/burger-menu-default-icon.svg" alt="Burger Menu">
+          <span></span>
+          <span></span>
         </div> 
       </div>
     </header>
@@ -184,5 +187,7 @@
       </div>
     </footer>  
   </div>
+
+  <script src="./js/header_burger_menu.js"></script>
 </body>
 </html>
