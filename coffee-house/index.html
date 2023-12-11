@@ -11,24 +11,27 @@
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 
-<body>
+<body class="body">
   <div class="wrapper">
     <header id="header">
       <div class="header_container">
         <a href="#" class="header_logo"><img src="./images/logo.svg" alt="Coffee House"></a>
         <div class="header_navigation-block">
-          <nav>
-            <ul class="nav_list">
-              <li class="nav_list-item"><a href="#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
-              <li class="nav_list-item"><a href="#about_section" class="nav_list-item_link">About</a></li>
-              <li class="nav_list-item"><a href="#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
-              <li class="nav_list-item"><a href="#footer_main_section" class="nav_list-item_link">Contact us</a></li>
-            </ul>
-          </nav>
-          <a href="menu.html" class="nav_menu-link home_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></a>
+          <div class="nav-block_wrapper">
+            <nav>
+              <ul class="nav_list">
+                <li class="nav_list-item"><a href="#favorite-coffee_section" class="nav_list-item_link">Favorite coffee</a></li>
+                <li class="nav_list-item"><a href="#about_section" class="nav_list-item_link">About</a></li>
+                <li class="nav_list-item"><a href="#mobile-app_section" class="nav_list-item_link">Mobile app</a></li>
+                <li class="nav_list-item"><a href="#footer_main_section" class="nav_list-item_link">Contact us</a></li>
+              </ul>
+            </nav>
+            <a href="menu.html" class="nav_menu-link home_page">Menu<img src="./images/coffee-cup-icon.svg" alt="Menu Icon"></a>
+          </div>
         </div>
         <div class="burger-menu_button">
-          <img src="./images/burger-menu-default-icon.svg" alt="Burger Menu">
+          <span></span>
+          <span></span>
         </div> 
       </div>
     </header>
@@ -36,15 +39,21 @@
     <main class="main">
       <section class="enjoy">
         <div class="enjoy_container">
-          <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
-          <p>With its inviting atmosphere and delicious coffee options, 
-            the Coffee House Resource is a popular destination for coffee 
-            lovers and those seeking a warm and inviting space to enjoy their 
-            favorite beverage.
-          </p>
-          <a href="menu.html" class="enjoy_button">
-            <span class="enjoy_button-text">Menu</span>
-          </a>
+          <video autoplay muted loop>
+            <source src="./images/video-720p.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <div class="enjoy_text">
+            <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
+            <p>With its inviting atmosphere and delicious coffee options, 
+              the Coffee House Resource is a popular destination for coffee 
+              lovers and those seeking a warm and inviting space to enjoy their 
+              favorite beverage.
+            </p>
+            <a href="menu.html" class="enjoy_button">
+              <span class="enjoy_button-text">Menu</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -55,14 +64,32 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </div> 
-          <div class="carousel_slide">
-            <img src="./images/carousel_slide_1.svg" alt="Frappuccino">
-            <h3>S’mores Frappuccino</h3>
-            <p>This new drink takes an espresso and mixes it with brown sugar and
-              cinnamon before being topped with oat milk.</p>
-            <span>$5.50</span>
           </div>
+          <div class="carousel_slide-window">
+            <div class="carousel_slide-train"> 
+              <div class="carousel_slide">
+                <img src="./images/carousel_slide_1.svg" alt="Frappuccino">
+                <h3>S’mores Frappuccino</h3>
+                <p>This new drink takes an espresso and mixes it with brown sugar and
+                  cinnamon before being topped with oat milk.</p>
+                <span>$5.50</span>
+              </div>
+              <div class="carousel_slide">
+                <img src="./images/carousel_slide_2.svg" alt="Caramel Macchiato">
+                <h3>Caramel Macchiato</h3>
+                <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, 
+                  with cream under whipped thick foam.</p>
+                <span>$5.00</span>
+              </div>
+              <div class="carousel_slide">
+                <img src="./images/carousel_slide_3.svg" alt="Ice coffee">
+                <h3>Ice coffee</h3>
+                <p>A popular summer drink that tones and invigorates. Prepared 
+                  from coffee, milk and ice.</p>
+                <span>$4.50</span>
+              </div>
+            </div>
+          </div>  
           <div class="carousel_arrow right">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
@@ -70,9 +97,9 @@
           </div>
         </div>
         <div class="carousel_pagination">
-          <span class="carousel_pagination_control active"></span>
-          <span class="carousel_pagination_control"></span>
-          <span class="carousel_pagination_control"></span>
+          <div class="carousel_pagination_control active"><div></div></div>
+          <div class="carousel_pagination_control"><div></div></div>
+          <div class="carousel_pagination_control"><div></div></div>
         </div>
       </section>
 
@@ -178,5 +205,9 @@
       </div>
     </footer>  
   </div>
+
+  <script src="./js/header_burger_menu.js"></script>
+  <!--<script src="./js/favorites_carousel.js"></script>-->
+  <script src="./js/favorites_carousel.js"></script>
 </body>
 </html>
