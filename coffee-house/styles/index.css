@@ -439,6 +439,21 @@ h2 > span {
   transition: stroke 0.4s ease-in-out;
 }
 
+.carousel_slide-window {
+  width: 480px;
+  height: auto;
+  overflow: hidden;
+}
+
+.carousel_slide-train {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 50px;
+  position: relative;
+  left: 0px;
+  transition: 0.5s ease-in-out;
+}
+
 .carousel_slide {
   display: flex;
   flex-flow: column nowrap;
@@ -487,8 +502,19 @@ h2 > span {
   background-color: var(--border-light);
 }
 
-.carousel_pagination_control.active {
+.carousel_pagination_control div {
+  width: 0%;
+  height: 100%;
   background-color: var(--border-dark);
+}
+
+@keyframes progress {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+.carousel_pagination_control.active div {
+  animation: progress 5s linear;
 }
 
 @media screen and (max-width: 768px) {
