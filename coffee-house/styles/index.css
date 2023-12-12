@@ -428,7 +428,7 @@ h2 > span {
 .carousel_arrow svg{
   width: 60px;
   height: 60px;
-  margin: 4px;
+  margin: 0 4px 44px 4px;
   padding: 18px;
   border: 1px solid var(--border-dark);
   border-radius: 100px;
@@ -437,6 +437,15 @@ h2 > span {
 
 .carousel_arrow svg path{
   transition: stroke 0.4s ease-in-out;
+}
+
+.carousel_switching-area {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  width: 100%;
 }
 
 .carousel_slide-window {
@@ -491,7 +500,6 @@ h2 > span {
   display: flex;
   flex-flow: row nowrap;
   gap: 12px;
-  margin-top: 40px;
 }
 
 .carousel_pagination_control {
@@ -515,6 +523,11 @@ h2 > span {
 
 .carousel_pagination_control.active div {
   animation: progress 5s linear;
+  animation-play-state: running;
+}
+
+.carousel_pagination_control.active.paused div{
+  animation-play-state: paused;
 }
 
 @media screen and (max-width: 768px) {
