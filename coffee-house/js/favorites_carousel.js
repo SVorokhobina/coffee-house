@@ -2,6 +2,8 @@ let leftOffset = 0;
 let currentSlide = 0;
 let slideTrain = document.querySelector('.carousel_slide-train');
 let progressBars = document.querySelectorAll('.carousel_pagination_control');
+let switchingArea = document.querySelector('.carousel_switching-area');
+/*let slideWindow = document.querySelector('.carousel_slide-window');*/
 
 let leftOffsetLimit;
 let leftOffsetShift;
@@ -87,13 +89,13 @@ let x1 = 0;
 let y1 = 0;
 
 /* Swipe with a finger */
-slideTrain.addEventListener('touchstart', function(event) {
+switchingArea.addEventListener('touchstart', function(event) {
   x1 = event.changedTouches[0].pageX; // if not arrows, start swiping
   y1 = event.changedTouches[0].pageY;
   event.preventDefault();
 });
 
-slideTrain.addEventListener('touchend', function(event) {
+switchingArea.addEventListener('touchend', function(event) {
   x2 = event.changedTouches[0].pageX;
   y2 = event.changedTouches[0].pageY;
   let x_diff = x2 - x1;
@@ -124,18 +126,18 @@ slideTrain.addEventListener('touchend', function(event) {
   event.preventDefault();
 });
 
-slideTrain.addEventListener('touchmove', function(event) {
+switchingArea.addEventListener('touchmove', function(event) {
   event.preventDefault();
 });
 
 /* Swipe with a mouse cursor */
-slideTrain.addEventListener('mousedown', function(event) {
+switchingArea.addEventListener('mousedown', function(event) {
   x1 = event.pageX;
   y1 = event.pageY;
   event.preventDefault();
 });
 
-slideTrain.addEventListener('mouseup', function(event) {
+switchingArea.addEventListener('mouseup', function(event) {
   x2 = event.pageX;
   y2 = event.pageY;
   let x_diff_mouse = x2 - x1;
@@ -166,3 +168,16 @@ slideTrain.addEventListener('mouseup', function(event) {
   }
   event.preventDefault();
 });
+
+/* --------------- onmouseover effects --------------- */
+
+/* slideWindow.addEventListener('mouseover', function() {
+  document.querySelector('.carousel_pagination_control.active').classList.add('paused');
+});
+
+slideWindow.addEventListener('mouseout', function() {
+  for (let bar of progressBars) {
+    bar.classList.remove('active');
+  }
+});
+*/
