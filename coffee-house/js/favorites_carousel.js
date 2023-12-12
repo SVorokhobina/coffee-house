@@ -3,7 +3,7 @@ let currentSlide = 0;
 let slideTrain = document.querySelector('.carousel_slide-train');
 let progressBars = document.querySelectorAll('.carousel_pagination_control');
 let switchingArea = document.querySelector('.carousel_switching-area');
-/*let slideWindow = document.querySelector('.carousel_slide-window');*/
+let slideWindow = document.querySelector('.carousel_slide-window');
 
 let leftOffsetLimit;
 let leftOffsetShift;
@@ -101,10 +101,8 @@ switchingArea.addEventListener('touchend', function(event) {
   let x_diff = x2 - x1;
   let y_diff = y2 - y1;
   if (Math.abs(x_diff) > Math.abs(y_diff)) {
+    clearInterval(autoChangeSlide);
     if (x_diff > 0) {
-      if (autoChangeSlide) {
-        clearInterval(autoChangeSlide);
-      }
       showLeftSlide();
       changeActiveProgressBar(currentSlide);
       autoChangeSlide = setInterval(function() {
@@ -112,9 +110,6 @@ switchingArea.addEventListener('touchend', function(event) {
         changeActiveProgressBar(currentSlide);
       }, 5000);
     } else {
-      if (autoChangeSlide) {
-        clearInterval(autoChangeSlide);
-      }
       showRightSlide();
       changeActiveProgressBar(currentSlide);
       autoChangeSlide = setInterval(function() {
@@ -144,10 +139,8 @@ switchingArea.addEventListener('mouseup', function(event) {
   let y_diff_mouse = y2 - y1;
 
   if (Math.abs(x_diff_mouse) > Math.abs(y_diff_mouse)) {
+    clearInterval(autoChangeSlide);
     if (x_diff_mouse > 0) {
-      if (autoChangeSlide) {
-        clearInterval(autoChangeSlide);
-      }
       showLeftSlide();
       changeActiveProgressBar(currentSlide);
       autoChangeSlide = setInterval(function() {
@@ -155,9 +148,6 @@ switchingArea.addEventListener('mouseup', function(event) {
         changeActiveProgressBar(currentSlide);
       }, 5000);
     } else {
-      if (autoChangeSlide) {
-        clearInterval(autoChangeSlide);
-      }
       showRightSlide();
       changeActiveProgressBar(currentSlide);
       autoChangeSlide = setInterval(function() {
@@ -171,13 +161,36 @@ switchingArea.addEventListener('mouseup', function(event) {
 
 /* --------------- onmouseover effects --------------- */
 
-/* slideWindow.addEventListener('mouseover', function() {
+slideWindow.addEventListener('mouseover', function() {
+  clearInterval(autoChangeSlide);
   document.querySelector('.carousel_pagination_control.active').classList.add('paused');
+  
+  slideWindow.addEventListener('mouseout', function() {
+    document.querySelector('.carousel_pagination_control.active').classList.remove('paused');
+    document.querySelector('.carousel_pagination_control.active').addEventListener('animationend', function() {
+      showRightSlide();
+      changeActiveProgressBar(currentSlide);
+      autoChangeSlide = setInterval(function() {
+        showRightSlide();
+        changeActiveProgressBar(currentSlide);
+      }, 5000);
+    }, {once: true,});
+  }, {once: true,});
 });
 
-slideWindow.addEventListener('mouseout', function() {
-  for (let bar of progressBars) {
-    bar.classList.remove('active');
-  }
-});
-*/
+/*slideWindow.addEventListener('touchstart', function() {
+  clearInterval(autoChangeSlide);
+  document.querySelector('.carousel_pagination_control.active').classList.add('paused');
+  
+  slideWindow.addEventListener('touchend', function() {
+    document.querySelector('.carousel_pagination_control.active').classList.remove('paused');
+    document.querySelector('.carousel_pagination_control.active').addEventListener('animationend', function() {
+      showRightSlide();
+      changeActiveProgressBar(currentSlide);
+      autoChangeSlide = setInterval(function() {
+        showRightSlide();
+        changeActiveProgressBar(currentSlide);
+      }, 5000);
+    }, {once: true,});
+  }, {once: true,});
+});*/
